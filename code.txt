@@ -1,0 +1,45 @@
+<!-- Certification Navigation -->
+<nav>
+    <a href="#" onclick="filterCerts('all')">All</a>
+    <a href="#" onclick="filterCerts('data-science')">Data Science</a>
+    <a href="#" onclick="filterCerts('machine-learning')">Machine Learning</a>
+    <a href="#" onclick="filterCerts('ai')">AI</a>
+</nav>
+
+<!-- Certification Section -->
+<section id="certifications">
+    <h3 class="page-title white-text teal">Certifications</h3>
+    <div class="container">
+        <h4>Data Science Certification</h4>
+        <p>Institution: XYZ University</p>
+        <p>Completed: January 2021</p>
+    </div>
+    <div class="card machine-learning">
+        <h4>Machine Learning Certification</h4>
+        <p>Institution: ABC Institute</p>
+        <p>Completed: March 2021</p>
+    </div>
+    <div class="card ai">
+        <h4>AI Certification</h4>
+        <p>Institution: LMN College</p>
+        <p>Completed: June 2021</p>
+    </div>
+</section>
+
+<script>
+    function filterCerts(category) {
+        // Get all certification cards
+        var certCards = document.getElementsByClassName("card");
+
+        // Loop through each card and hide/show based on selected category
+        for (var i = 0; i < certCards.length; i++) {
+        if (category === "all") {
+            certCards[i].style.display = "block";
+        } else if (certCards[i].classList.contains(category)) {
+        certCards[i].style.display = "block";
+        } else {
+        certCards[i].style.display = "none";
+        }
+        }
+        }
+</script>
